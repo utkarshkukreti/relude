@@ -30,6 +30,9 @@ jobs:
         key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-npm-
+
+    - name: npm install -g esy
+      run: npm install -g esy
       
     - name: npm install
       run: npm install
